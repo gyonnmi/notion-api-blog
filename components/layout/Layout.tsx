@@ -1,0 +1,14 @@
+import React, { PropsWithChildren } from "react";
+import Header from "./Header";
+
+//PropsWithChildren => children 하나만 가져올 때 이거 쓰면 편함
+const Layout = ({ children }: PropsWithChildren) => {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
+};
+
+export default Layout;
