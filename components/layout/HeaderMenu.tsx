@@ -8,6 +8,7 @@ import {
   AiOutlineProfile,
 } from "react-icons/ai";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const NavTable = {
   "/": {
@@ -28,9 +29,19 @@ const NavTable = {
   },
 };
 
-const HeaderMenu = () => {
+interface HeaderMenuProps {
+  isMenuOpen: boolean;
+}
+
+const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
+  const { asPath } = useRouter(); //basePath이나 locale이 포함되지 않은 path
+
   return (
-    <aside className="bg-red-50 fixed top-0 bottom-0 w-3/5 border-r max-w-sm">
+    <aside
+      className={`bg-red-50 fixed top-0 bottom-0 w-3/5 border-r max-w-sm transition-all duration-500
+      ${isMenuOpen ? "left-0" : "-left-[60%]"}
+    `}
+    >
       <div className="py-8 flex flex-col h-full">
         <div className="relative w-full h-1/3">
           <Image
@@ -49,7 +60,9 @@ const HeaderMenu = () => {
           {Object.entries(NavTable).map(([href, value]) => (
             <li
               key={href}
-              className="hover:bg-gray-200 hover:text-red-400 text-2xl text-black/50"
+              className={`text-2xl text-black/50 hover:bg-gray-200 hover:text-red-400 ${
+                asPath === href ? "text-red-400 bg-gray-200" : ""
+              }`}
             >
               <Link href={href}>
                 <p className="flex flex-row gap-2 items-center p-2">
