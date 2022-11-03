@@ -38,7 +38,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
 
   return (
     <aside
-      className={`bg-red-50 fixed top-0 bottom-0 w-3/5 border-r max-w-sm transition-all duration-500
+      className={`z-50 bg-red-50 fixed top-0 bottom-0 w-3/5 border-r max-w-sm transition-all duration-500
       ${isMenuOpen ? "left-0" : "-left-[60%]"}
     `}
     >

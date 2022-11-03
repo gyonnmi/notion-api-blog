@@ -1,10 +1,23 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+import Backdrop from "./Backdrop";
 import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {
+  const { pathname } = useRouter(); //현재 경로
   const [isMenuOpen, setIsMenuOpen] = useState(false); //메뉴 토글 상태
+
+  // 사이드메뉴 on/off 클래스 탈부착
+  useEffect(() => {
+    document.body.className = isMenuOpen ? "isMenuOpen" : "";
+  }, [isMenuOpen]);
+
+  // 경로가 바뀌면 사이드메뉴 닫기
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -31,6 +44,13 @@ const Header = () => {
         </div>
       </header>
       <HeaderMenu isMenuOpen={isMenuOpen} />
+      {isMenuOpen ? (
+        <Backdrop
+          onClick={() => {
+            setIsMenuOpen(false);
+          }}
+        />
+      ) : null}
     </>
   );
 };
