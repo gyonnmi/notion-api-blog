@@ -43,7 +43,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
     `}
     >
       <div className="py-8 flex flex-col h-full">
-        <div className="relative w-full h-1/3">
+        <div className="relative w-full h-1/4 mx-auto">
           <Image
             src={rizy}
             alt="Profile Image"
@@ -60,12 +60,12 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
           {Object.entries(NavTable).map(([href, value]) => (
             <li
               key={href}
-              className={`text-2xl text-black/50 hover:bg-gray-200 hover:text-red-400 ${
+              className={`text-xl text-black/50 hover:bg-gray-200 hover:text-red-400 ${
                 asPath === href ? "text-red-400 bg-gray-200" : ""
               }`}
             >
               <Link href={href}>
-                <p className="flex flex-row gap-2 items-center p-2">
+                <p className="flex flex-row gap-2 items-center px-8 py-6">
                   <span>{value.icon}</span>
                   {value.name}
                 </p>
