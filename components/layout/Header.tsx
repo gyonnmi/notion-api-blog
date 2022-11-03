@@ -33,7 +33,7 @@ const Header = () => {
           </button>
           <Link href={"/"}>
             <h1 className="font-bold text-2xl cursor-pointer select-none">
-              Rizy's Devlog
+              Rizy's devlog
             </h1>
           </Link>
           <button className="p-1 hover:bg-gray-200 rounded-lg">
