@@ -17,7 +17,6 @@ const Footer = () => {
           <ul className="flex flex-row flex-wrap justify-center gap-4">
             <li className="hover:bg-white/20 rounded-lg">
               <a
-                className="p-1"
                 href="https://github.com/gyonnmi"
                 target="_blank"
                 rel="noreferrer"
@@ -29,7 +28,6 @@ const Footer = () => {
             </li>
             <li className="hover:bg-white/20 rounded-lg">
               <a
-                className="p-1"
                 href="https://www.instagram.com/_rariho/"
                 target="_blank"
                 rel="noreferrer"
@@ -41,7 +39,6 @@ const Footer = () => {
             </li>
             <li className="hover:bg-white/20 rounded-lg">
               <a
-                className="p-1"
                 href="https://km713.tistory.com/"
                 target="_blank"
                 rel="noreferrer"
