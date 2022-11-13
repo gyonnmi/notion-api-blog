@@ -14,14 +14,20 @@ const CardItem = ({ data }: CardItemsProps) => {
 
   return (
     <li>
-      <article>
+      <article className="group">
         <Link href={`/blog/${id}`}>
           <div className="relative pt-[64%] rounded-lg overflow-hidden mb-4">
             {/* layout="fill" = 전체를 가득 채워라 */}
-            <Image src={cover} alt={title} layout="fill" objectFit="cover" />
+            <Image
+              src={cover}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              className="group-hover:scale-110"
+            />
           </div>
           <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-bold group-hover:text-red-400">
               <IconRenderer icon={icon} />
               {title}
             </h2>
@@ -32,7 +38,9 @@ const CardItem = ({ data }: CardItemsProps) => {
             <time className="text-gray-500 font-light">{published}</time>
           </div>
         </Link>
-        <TagList tags={tags} />
+        <div className="mt-2">
+          <TagList tags={tags} />
+        </div>
       </article>
     </li>
   );

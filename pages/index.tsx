@@ -25,7 +25,7 @@ export default function Home({ data }: HomeProps) {
 
       <HeroSection />
 
-      <section className="m-4 gap-8 px-4">
+      <section className="m-4 min-h-[50vh] gap-8 px-4">
         <CardList data={data} />
       </section>
     </>
