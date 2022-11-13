@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { CardData } from 'types/types';
+import IconRenderer from './IconRenderer';
+import TagList from './tags/TagList';
 
 interface CardItemsProps {
   data: CardData;
@@ -20,7 +22,7 @@ const CardItem = ({ data }: CardItemsProps) => {
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold">
-              icon
+              <IconRenderer icon={icon} />
               {title}
             </h2>
             {/* 조건부 렌더링 */}
@@ -30,7 +32,7 @@ const CardItem = ({ data }: CardItemsProps) => {
             <time className="text-gray-500 font-light">{published}</time>
           </div>
         </Link>
-        <div>tags</div>
+        <TagList tags={tags} />
       </article>
     </li>
   );
