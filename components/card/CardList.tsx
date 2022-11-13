@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardData } from 'types/types';
+import CardItem from './CardItem';
 
 interface CardListProps {
   data: CardData[];
@@ -7,9 +8,9 @@ interface CardListProps {
 
 const CardList = ({ data }: CardListProps) => {
   return (
-    <ul>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {data.map((item) => (
-        <li key={item.id}>{item.title}</li>
+        <CardItem key={item.id} data={item} />
       ))}
     </ul>
   );
