@@ -27,17 +27,16 @@ export default function Home({ data, allTags }: HomeProps) {
       </Head>
 
       <HeroSection />
-
-      <section className="m-4 min-h-[50vh] max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-8 px-4">
+      <section>
         {/* basis = 비율 */}
-        <aside className="basis-[20%]">
+        <aside style={{ flexBasis: '20%' }}>
           <div className="p-6 rounded-xl shadow-md border">
-            <h2 className="text-2xl font-bold mb-4">All Tags</h2>
+            <h2 className="text-2xl font-bold mb-4">Tags</h2>
             <TagList tags={allTags} />
           </div>
         </aside>
         {/* flex-grow = 남는 공간 전부 차지 */}
-        <div className="flex-grow px-4">
+        <div>
           <h3 className="font-bold text-4xl mb-4">Devlog</h3>
           <CardList data={data} />
         </div>
