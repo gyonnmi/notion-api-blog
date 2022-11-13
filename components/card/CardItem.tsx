@@ -38,7 +38,7 @@ const CardItem = ({ data }: CardItemsProps) => {
             <time className="text-gray-500 font-light">{published}</time>
           </div>
         </Link>
-        <div className="mt-2">
+        <div className="mt-2 mb-2">
           <TagList tags={tags} />
         </div>
       </article>
