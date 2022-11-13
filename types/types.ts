@@ -3,7 +3,7 @@ import {
   PageObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 
-export interface cardData {
+export interface CardData {
   id: string;
   cover: string;
   title: string;

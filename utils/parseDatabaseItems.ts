@@ -1,10 +1,10 @@
 import { getDatabaseItems } from '../cms/notion';
-import { cardData } from '../types/types';
+import { CardData } from '../types/types';
 
 export const parseDatabaseItems = (
   databaseItems: Awaited<ReturnType<typeof getDatabaseItems>>
 ) =>
-  databaseItems.reduce<cardData[]>((acc, item) => {
+  databaseItems.reduce<CardData[]>((acc, item) => {
     if (!('properties' in item)) return acc;
 
     const { Description, Published, Tags, 이름 } = item.properties;
@@ -20,7 +20,7 @@ export const parseDatabaseItems = (
 
     const description =
       Description?.type === 'rich_text'
-        ? Description.rich_text[0]?.plain_text
+        ? Description.rich_text[0]?.plain_text ?? ''
         : '';
 
     const published =
