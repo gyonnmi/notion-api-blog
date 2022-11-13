@@ -7,7 +7,6 @@ export const parseDatabaseItems = (
   databaseItems.reduce<cardData[]>((acc, item) => {
     if (!('properties' in item)) return acc;
 
-    console.log(item.properties);
     const { Description, Published, Tags, 이름 } = item.properties;
 
     const cover =
@@ -21,21 +20,23 @@ export const parseDatabaseItems = (
 
     const description =
       Description?.type === 'rich_text'
-        ? Description.rich_text[0].plain_text
+        ? Description.rich_text[0]?.plain_text
         : '';
 
     const published =
       // 옵셔널 체이닝, start가 없을 경우 date를 undefind로 반환
       Published?.type === 'date' ? Published.date?.start ?? '' : '';
 
+    const tags = Tags.type === 'multi_select' ? Tags.multi_select : [];
+
     acc.push({
       id: item.id,
+      icon: item.icon,
       cover,
       title,
       description,
       published,
-      icon: item.icon,
-      tags: Tags,
+      tags,
     });
 
     return acc;

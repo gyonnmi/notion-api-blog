@@ -4,9 +4,14 @@ import Image from 'next/image';
 import { getDatabaseItems } from '../cms/notion';
 import PageHead from '../components/common/PageHead';
 import styles from '../styles/Home.module.css';
+import { cardData } from '../types/types';
 import { parseDatabaseItems } from '../utils/parseDatabaseItems';
 
-export default function Home() {
+interface HomeProps {
+  data: cardData[];
+}
+
+export default function Home({ data }: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -62,7 +67,7 @@ export default function Home() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const databaseId = process.env.DATABASE_ID;
 
   // databaseId가 undefind일 경우
@@ -73,6 +78,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const parsedData = parseDatabaseItems(databaseItems);
 
   return {
-    props: {},
+    props: {
+      data: parsedData,
+    },
   };
 };

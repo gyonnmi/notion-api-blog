@@ -1,4 +1,7 @@
-import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import {
+  MultiSelectPropertyItemObjectResponse,
+  PageObjectResponse,
+} from '@notionhq/client/build/src/api-endpoints';
 
 export interface cardData {
   id: string;
@@ -7,5 +10,5 @@ export interface cardData {
   description: string;
   published: string;
   icon: PageObjectResponse['icon'];
-  tags: string[];
+  tags: MultiSelectPropertyItemObjectResponse['multi_select'];
 }
