@@ -35,7 +35,9 @@ const CardItem = ({ data }: CardItemsProps) => {
             {description ? (
               <p className="text-gray-700">{description}</p>
             ) : null}
-            <time className="text-gray-500 font-light">{published}</time>
+            <time className="text-gray-500 font-light text-sm">
+              {published}
+            </time>
           </div>
         </Link>
         <div className="mt-2 mb-2">

@@ -30,13 +30,16 @@ export default function Home({ data, allTags }: HomeProps) {
       <section>
         {/* basis = 비율 */}
         <aside style={{ flexBasis: '20%' }}>
-          <div className="p-6 rounded-xl shadow-md border">
+          <div
+            className="p-6 m-4 rounded-xl shadow-md border"
+            style={{ margin: '1.5rem' }}
+          >
             <h2 className="text-2xl font-bold mb-4">Tags</h2>
             <TagList tags={allTags} />
           </div>
         </aside>
         {/* flex-grow = 남는 공간 전부 차지 */}
-        <div>
+        <div style={{ margin: '1.5rem' }}>
           <h3 className="font-bold text-4xl mb-4">Devlog</h3>
           <CardList data={data} />
         </div>
