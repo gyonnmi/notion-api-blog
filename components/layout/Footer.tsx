@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineBold,
-} from "react-icons/ai";
+} from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-pink-300 to-orange-300 p-8 text-white text-lg">
-      <div className="flex flex-row flex-wrap justify-between max-w-5xl mx-auto">
+      <div className="flex flex-row flex-wrap justify-around items-center max-w-5xl mx-auto gap-4">
         <a href="mailto:hikari980713@gmail.com" className="hover:underline">
           hikari980713@gmail.com
         </a>

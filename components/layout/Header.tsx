@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="border-b sticky top-0 bg-white/40 backdrop-blur-md z-50">
+      <header className="sticky top-0 bg-white/40 backdrop-blur-md z-50">
         <div className="p-6 flex flex-row justify-between max-w-4xl mx-auto">
           <button
             className="p-1 hover:bg-gray-200 rounded-lg"

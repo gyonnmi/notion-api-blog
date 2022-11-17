@@ -1,30 +1,30 @@
-import Image from "next/image";
-import React from "react";
-import rizy from "../../public/rizy.png";
+import Image from 'next/image';
+import React from 'react';
+import rizy from '../../public/rizy.png';
 import {
   AiOutlineHome,
   AiOutlineTags,
   AiOutlineSearch,
   AiOutlineProfile,
-} from "react-icons/ai";
-import Link from "next/link";
-import { useRouter } from "next/router";
+} from 'react-icons/ai';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavTable = {
-  "/": {
-    name: "Home",
+  '/': {
+    name: 'Home',
     icon: <AiOutlineHome />,
   },
-  "/tags": {
-    name: "Tags",
+  '/tags': {
+    name: 'Tags',
     icon: <AiOutlineTags />,
   },
-  "/search": {
-    name: "Search",
+  '/search': {
+    name: 'Search',
     icon: <AiOutlineSearch />,
   },
-  "/profile": {
-    name: "Profile",
+  '/profile': {
+    name: 'Profile',
     icon: <AiOutlineProfile />,
   },
 };
@@ -39,7 +39,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
   return (
     <aside
       className={`z-50 bg-red-50 fixed top-0 bottom-0 w-3/5 border-r max-w-sm transition-all duration-500
-      ${isMenuOpen ? "left-0" : "-left-[60%]"}
+      ${isMenuOpen ? 'left-0' : '-left-[60%]'}
     `}
     >
       <div className="py-8 flex flex-col h-full">
@@ -61,7 +61,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
             <li
               key={href}
               className={`text-xl text-black/50 hover:bg-gray-200 hover:text-red-400 ${
-                asPath === href ? "text-red-400 bg-gray-200" : ""
+                asPath === href ? 'text-red-400 bg-gray-200' : ''
               }`}
             >
               <Link href={href}>
