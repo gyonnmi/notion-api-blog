@@ -28,7 +28,10 @@ const HeroSection = () => {
             once: true,
           }}
         >
-          <h1 className="font-black text-5xl mb-2 bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent">
+          <h1
+            className="font-black text-5xl mb-2 bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent"
+            style={{ lineHeight: '2' }}
+          >
             Notion Devlog
           </h1>
           <p>Next.js와 Notion API로 만든 기술 블로그 입니다.</p>
