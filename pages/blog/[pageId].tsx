@@ -1,4 +1,5 @@
 import { getDatabaseItems, getPageContent } from 'cms/notion';
+import NotionPageRenderer from 'components/notion/NotionPageRenderer';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ExtendedRecordMap } from 'notion-types';
 import React from 'react';
@@ -8,7 +9,11 @@ interface BlogDetailsPageProps {
 }
 
 const BlogDetailsPage = ({ recordMap }: BlogDetailsPageProps) => {
-  return <div>BlogDetailsPage</div>;
+  return (
+    <section>
+      <NotionPageRenderer recordMap={recordMap} />
+    </section>
+  );
 };
 
 export default BlogDetailsPage;
