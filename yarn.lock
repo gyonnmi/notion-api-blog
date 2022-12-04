@@ -177,7 +177,7 @@
 
 "@notionhq/client@^2.2.2":
   version "2.2.2"
-  resolved "https://registry.npmjs.org/@notionhq/client/-/client-2.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-2.2.2.tgz#621eab5788fd1aca67d53454871bbf4122e651ba"
   integrity sha512-L7TB+UyhnWTSv1ek7xzGr9+mS9o76qMKnZ8Ag8H2q6QgvywAiPOFcE3ulWI/1AnMewGVRqwb30agPHMVRY/K/w==
   dependencies:
     "@types/node-fetch" "^2.5.10"
