@@ -71,7 +71,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
           </Link>
         </motion.h1>
         <ul className="mt-8 flex flex-col">
-          {Object.entries(NavTable).map(([href, value], index) => (
+          {Object.entries(NavTable).map(([href, value]) => (
             <li
               key={href}
               className={`text-xl text-black/50 hover:bg-gray-200 hover:text-red-400 ${
@@ -79,15 +79,10 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
               }`}
             >
               <Link href={href}>
-                <motion.a
-                  className="flex flex-row gap-2 items-center px-8 py-6"
-                  initial={{ x: -60 }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
-                >
+                <p className="flex flex-row gap-2 items-center px-8 py-6">
                   <span>{value.icon}</span>
                   {value.name}
-                </motion.a>
+                </p>
               </Link>
             </li>
           ))}
