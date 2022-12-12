@@ -1,6 +1,8 @@
 import { getDatabaseItems, getPageContent } from 'cms/notion';
+import LoadingSpiner from 'components/common/LoadingSpiner';
 import NotionPageRenderer from 'components/notion/NotionPageRenderer';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import { ExtendedRecordMap } from 'notion-types';
 import React from 'react';
 
@@ -9,6 +11,15 @@ interface BlogDetailsPageProps {
 }
 
 const BlogDetailsPage = ({ recordMap }: BlogDetailsPageProps) => {
+  const { isFallback } = useRouter();
+
+  if (isFallback)
+    return (
+      <div className="w-full flex justify-center">
+        <LoadingSpiner />
+      </div>
+    );
+
   return (
     <section>
       <NotionPageRenderer recordMap={recordMap} />
@@ -31,6 +42,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       recordMap,
     },
+    revalidate: 60, // 빌드 쿨타임
   };
 };
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { CardData } from 'types/types';
 import IconRenderer from './IconRenderer';
 import TagList from './tags/TagList';
@@ -14,9 +14,18 @@ const CardItem = ({ data }: CardItemsProps) => {
   const { id, cover, title, description, published, icon, tags, expiryTime } =
     data;
 
+  const [coverSrc, setCoverSrc] = useState(cover);
+  const [iconSrc, setIconSrc] = useState(icon);
+
   const getImageSrc = useCallback(async () => {
     const res = await fetch(`api/getImageSrc?id=${id}`);
-    const data = await res.json();
+    const { coverSrc, iconSrc } = (await res.json()) as {
+      coverSrc: CardData['cover'];
+      iconSrc: CardData['icon'];
+    };
+
+    setCoverSrc(coverSrc);
+    setIconSrc(iconSrc);
   }, [id]);
 
   useEffect(() => {
@@ -45,7 +54,7 @@ const CardItem = ({ data }: CardItemsProps) => {
           <div className="relative pt-[64%] rounded-lg overflow-hidden mb-4">
             {/* layout="fill" = 전체를 가득 채워라 */}
             <Image
-              src={cover}
+              src={coverSrc}
               alt={title}
               layout="fill"
               objectFit="cover"
@@ -55,7 +64,7 @@ const CardItem = ({ data }: CardItemsProps) => {
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold group-hover:text-red-400">
-              <IconRenderer icon={icon} />
+              <IconRenderer icon={iconSrc} />
               {title}
             </h2>
             {/* 조건부 렌더링 */}

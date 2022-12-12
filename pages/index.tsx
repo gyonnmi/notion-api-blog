@@ -64,5 +64,6 @@ export const getStaticProps: GetStaticProps = async () => {
       data: parsedData,
       allTags: allTags,
     },
+    revalidate: 60, // 빌드 쿨타임
   };
 };
