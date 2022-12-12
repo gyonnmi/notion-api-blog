@@ -5,6 +5,9 @@ import { CardData } from 'types/types';
 import IconRenderer from './IconRenderer';
 import TagList from './tags/TagList';
 import { motion } from 'framer-motion';
+import { ImageSrcType } from 'pages/api/getImageSrc';
+import { IMAGE_LOADING_INDICATOR } from 'const/const';
+import LoadingSpiner from 'components/common/LoadingSpiner';
 
 interface CardItemsProps {
   data: CardData;
@@ -16,16 +19,16 @@ const CardItem = ({ data }: CardItemsProps) => {
 
   const [coverSrc, setCoverSrc] = useState(cover);
   const [iconSrc, setIconSrc] = useState(icon);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getImageSrc = useCallback(async () => {
-    const res = await fetch(`api/getImageSrc?id=${id}`);
-    const { coverSrc, iconSrc } = (await res.json()) as {
-      coverSrc: CardData['cover'];
-      iconSrc: CardData['icon'];
-    };
+    setIsLoading(true);
 
-    setCoverSrc(coverSrc);
-    setIconSrc(iconSrc);
+    const res = await fetch(`api/getImageSrc?id=${id}`);
+    const { cover, icon }: ImageSrcType = await res.json();
+
+    setCoverSrc(cover);
+    setIconSrc(icon);
   }, [id]);
 
   useEffect(() => {
@@ -60,7 +63,13 @@ const CardItem = ({ data }: CardItemsProps) => {
               objectFit="cover"
               className="group-hover:scale-110"
               onError={getImageSrc}
+              onLoad={() => setIsLoading(false)}
             />
+            {isLoading ? (
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                <LoadingSpiner />
+              </div>
+            ) : null}
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold group-hover:text-red-400">
