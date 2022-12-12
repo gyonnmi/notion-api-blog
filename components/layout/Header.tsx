@@ -11,6 +11,11 @@ const Header = () => {
 
   // 사이드메뉴 on/off 클래스 탈부착
   useEffect(() => {
+    // window.innerWidth : 스크롤바를 포함한 전체 화면의 너비
+    // document.body.clientWidth : 스크롤바를 제외한 화면의 너비
+    const scrollbarWidth = window.innerWidth - document.body.clientWidth;
+    document.body.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+
     document.body.className = isMenuOpen ? 'isMenuOpen' : '';
   }, [isMenuOpen]);
 
