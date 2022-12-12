@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { CardData } from 'types/types';
 import IconRenderer from './IconRenderer';
 import TagList from './tags/TagList';
@@ -11,7 +11,19 @@ interface CardItemsProps {
 }
 
 const CardItem = ({ data }: CardItemsProps) => {
-  const { id, cover, title, description, published, icon, tags } = data;
+  const { id, cover, title, description, published, icon, tags, expiryTime } =
+    data;
+
+  const getImageSrc = useCallback(async () => {
+    const res = await fetch(`api/getImageSrc?id=${id}`);
+    const data = await res.json();
+  }, [id]);
+
+  useEffect(() => {
+    const isExpired = new Date(expiryTime) < new Date();
+
+    if (expiryTime) getImageSrc();
+  }, [expiryTime]);
 
   return (
     <motion.li
@@ -38,6 +50,7 @@ const CardItem = ({ data }: CardItemsProps) => {
               layout="fill"
               objectFit="cover"
               className="group-hover:scale-110"
+              onError={getImageSrc}
             />
           </div>
           <div className="flex flex-col gap-2">
