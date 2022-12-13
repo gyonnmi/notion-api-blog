@@ -63,6 +63,8 @@ const CardItem = ({ data }: CardItemsProps) => {
               objectFit="cover"
               className="group-hover:scale-110"
               onError={getImageSrc}
+              placeholder="blur"
+              blurDataURL={IMAGE_LOADING_INDICATOR}
               onLoad={() => setIsLoading(false)}
             />
             {isLoading ? (

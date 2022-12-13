@@ -1,7 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  title?: string;
+  description?: string;
+}
+
+const HeroSection = ({
+  // 기본값 설정
+  title = 'Hello, World!',
+  description = '',
+}: HeroSectionProps) => {
   return (
     <section>
       <motion.div
@@ -32,9 +41,9 @@ const HeroSection = () => {
             className="font-black text-5xl mb-2 bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent"
             style={{ lineHeight: '2' }}
           >
-            Notion Devlog
+            {title}
           </h1>
-          <p>Next.js와 Notion API로 만든 기술 블로그 입니다.</p>
+          {description}
         </motion.div>
       </motion.div>
     </section>

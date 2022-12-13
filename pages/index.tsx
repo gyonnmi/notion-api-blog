@@ -20,11 +20,6 @@ export default function Home({ data, allTags }: HomeProps) {
   return (
     <>
       <PageHead />
-      {/* <Head>
-        <title>Rizy's devlog ٩(๑′∀ ‵๑)۶•*¨*•.¸¸♪</title>
-        <meta name="description" content="프론트엔드 주니어 개발자🐣" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
 
       <HeroSection />
       <section>
