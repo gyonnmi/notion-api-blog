@@ -1,7 +1,11 @@
 import TagList from 'components/card/tags/TagList';
+import Pagination from 'components/common/Pagination';
+import { POSTS_PER_PAGE } from 'const/const';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import { CardData } from 'types/types';
 import { getAlltags } from 'utils/getAllTags';
 import { getDatabaseItems } from '../cms/notion';
@@ -17,6 +21,22 @@ interface HomeProps {
 }
 
 export default function Home({ data, allTags }: HomeProps) {
+  const { query } = useRouter();
+  const currentPage = query.page ? parseInt(query.page.toString()) : 1;
+
+  const [postData, setPostData] = useState(
+    data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage)
+  );
+
+  useEffect(() => {
+    setPostData(
+      data.slice(
+        POSTS_PER_PAGE * (currentPage - 1),
+        POSTS_PER_PAGE * currentPage
+      )
+    );
+  }, [currentPage, data]);
+
   return (
     <>
       <PageHead />
@@ -36,7 +56,10 @@ export default function Home({ data, allTags }: HomeProps) {
         {/* flex-grow = 남는 공간 전부 차지 */}
         <div style={{ margin: '1.5rem' }}>
           <h3 className="font-bold text-4xl mb-4">Devlog</h3>
-          <CardList data={data} />
+          <CardList data={postData} />
+          <div className="my-4 flex justify-center">
+            <Pagination current={currentPage} total={data.length} />
+          </div>
         </div>
       </section>
     </>

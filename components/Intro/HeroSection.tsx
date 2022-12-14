@@ -14,7 +14,7 @@ const HeroSection = ({
   return (
     <section>
       <motion.div
-        className="py-16 md:py-36 bg-[length:100%_55%] bg-no-repeat px-4 flex justify-center items-center bg-gradient-to-r from-purple-500 to-blue-500"
+        className="py-16 md:py-36 bg-[length:100%_55%] bg-no-repeat px-4 flex justify-center items-center bg-gradient-to-r from-purple-300 to-blue-300"
         initial={{
           backgroundSize: '100% 100%',
         }}
@@ -38,7 +38,7 @@ const HeroSection = ({
           }}
         >
           <h1
-            className="font-black text-5xl mb-2 bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent"
+            className="font-black text-5xl mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
             style={{ lineHeight: '2' }}
           >
             {title}

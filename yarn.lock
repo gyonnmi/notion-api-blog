@@ -234,6 +234,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lqip-modern@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@types/lqip-modern/-/lqip-modern-1.1.2.tgz#830f14ee2b34db809c18a6bd8c9a42664e356fb0"
+  integrity sha512-eLRzQ7Y2yXdxlsPsqSJODoDuLqj80wOC7f1sw6J2GZybRuMwwrfOrSDjLK/TkpW1qtomJVB62DiyPnPiu+I4oA==
+  dependencies:
+    "@types/node" "*"
+    "@types/sharp" "*"
+
 "@types/node-fetch@^2.5.10":
   version "2.6.2"
   resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.6.2.tgz"
@@ -288,6 +296,13 @@
   version "0.16.2"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
+"@types/sharp@*":
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.31.0.tgz#c4af03a7e1d126f0d428a265e126fabd86ab6d0f"
+  integrity sha512-nwivOU101fYInCwdDcH/0/Ru6yIRXOpORx25ynEOc6/IakuCmjOAGpaO5VfUl4QkDtUC6hj+Z2eCQvgXOioknw==
+  dependencies:
+    "@types/node" "*"
 
 "@xobotyi/scrollbar-width@^1.9.5":
   version "1.9.5"
