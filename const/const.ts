@@ -14,5 +14,5 @@ export const COLOR_TABLE = {
 export const IMAGE_LOADING_INDICATOR =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=';
 
-export const POSTS_PER_PAGE = 8;
+export const POSTS_PER_PAGE = 12; // 보여질 게시글 수
 export const PAGINATION_RANGE = 2;
