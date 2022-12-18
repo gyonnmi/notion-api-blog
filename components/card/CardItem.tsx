@@ -6,7 +6,7 @@ import IconRenderer from './IconRenderer';
 import TagList from './tags/TagList';
 import { motion } from 'framer-motion';
 import { ImageSrcType } from 'pages/api/getImageSrc';
-import { IMAGE_LOADING_INDICATOR } from 'const/const';
+import { DEFAULT_BASE64 } from 'const/const';
 import LoadingSpiner from 'components/common/LoadingSpiner';
 
 interface CardItemsProps {
@@ -14,8 +14,17 @@ interface CardItemsProps {
 }
 
 const CardItem = ({ data }: CardItemsProps) => {
-  const { id, cover, title, description, published, icon, tags, expiryTime } =
-    data;
+  const {
+    id,
+    cover,
+    title,
+    description,
+    published,
+    icon,
+    tags,
+    expiryTime,
+    preview,
+  } = data;
 
   const [coverSrc, setCoverSrc] = useState(cover);
   const [iconSrc, setIconSrc] = useState(icon);
@@ -64,7 +73,7 @@ const CardItem = ({ data }: CardItemsProps) => {
               className="group-hover:scale-110"
               onError={getImageSrc}
               placeholder="blur"
-              blurDataURL={IMAGE_LOADING_INDICATOR}
+              blurDataURL={preview?.dataURIBase64 ?? DEFAULT_BASE64}
               onLoad={() => setIsLoading(false)}
             />
             {isLoading ? (

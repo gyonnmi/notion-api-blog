@@ -39,6 +39,7 @@ const NotionPageRenderer = ({
       fullPage={true}
       disableHeader={true}
       showTableOfContents={true}
+      previewImages={!!recordMap?.preview_images}
       components={{
         Code,
         Collection,
