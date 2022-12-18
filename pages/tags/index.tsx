@@ -9,6 +9,7 @@ import { CardData } from 'types/types';
 import { getAlltags } from 'utils/getAllTags';
 import { parseDatabaseItems } from 'utils/parseDatabaseItems';
 import { insertPreviewImage } from 'utils/previewImage';
+import styles from './index.module.css';
 
 interface TagIndexPageProps {
   data: Record<string, CardData[]>;
@@ -20,24 +21,21 @@ const TagIndexPage = ({ data, allTags }: TagIndexPageProps) => {
     <>
       <PageHead />
       <HeroSection />
-      {/* {allTags.map(({ id, name }) => (
-        <section
-          key={id}
-          className="m-4 min-h-[50vh] max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-8 px-4"
-        >
-          <aside className="basis-[15%]">
-            <div className="p-4 rounded-xl shadow-md border">
-              <h2 className="text-2xl font-bold mb-4">Tags</h2>
-              <TagList tags={allTags} />
+      {allTags.map(({ id, name }) => (
+        <section key={id} className={`${styles.tagIndex}`}>
+          <aside className={`${styles.aside}`}>
+            <div className={`${styles.tags}`}>
+              <h2 className={`${styles.tagsTitle}`}>Tags</h2>
+              <TagList tags={getAlltags(data[name])} />
             </div>
           </aside>
-          <div className="flex-grow">
-            <h3 className="font-bold text-4xl mb-4">#{name}</h3>
+          <div className={`${styles.cardList}`}>
+            <h3 className={`${styles.tagTitle}`}>#{name}</h3>
 
             <CardList data={data[name]} />
           </div>
         </section>
-      ))} */}
+      ))}
     </>
   );
 };

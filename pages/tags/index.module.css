@@ -1,0 +1,45 @@
+.tagIndex {
+  max-width: 80rem;
+  min-height: 50vh;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 2rem;
+  display: flex;
+}
+
+.aside {
+  flex-basis: 15%;
+}
+
+.tags {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 5px 0px rgb(165, 165, 165);
+  border-radius: 15px;
+}
+
+.tagsTitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cardList {
+  flex-grow: 1;
+}
+
+.tagTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f58a70;
+}
+
+@media screen and (max-width: 768px) {
+  .tagIndex {
+    flex-direction: column;
+  }
+}

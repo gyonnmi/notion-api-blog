@@ -1,20 +1,17 @@
+import CardList from '../components/card/CardList';
 import TagList from 'components/card/tags/TagList';
+import PageHead from '../components/common/PageHead';
 import Pagination from 'components/common/Pagination';
 import { POSTS_PER_PAGE } from 'const/const';
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { CardData } from 'types/types';
 import { getAlltags } from 'utils/getAllTags';
-import { insertPreviewImage } from 'utils/previewImage';
 import { getDatabaseItems } from '../cms/notion';
-import CardList from '../components/card/CardList';
-import PageHead from '../components/common/PageHead';
 import HeroSection from '../components/Intro/HeroSection';
-import styles from '../styles/Home.module.css';
 import { parseDatabaseItems } from '../utils/parseDatabaseItems';
+import { insertPreviewImage } from 'utils/previewImage';
 
 interface HomeProps {
   data: CardData[];

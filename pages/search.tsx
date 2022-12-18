@@ -1,6 +1,5 @@
 import CardList from 'components/card/CardList';
 import LoadingSpiner from 'components/common/LoadingSpiner';
-
 import { useRouter } from 'next/router';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
