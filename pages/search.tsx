@@ -48,18 +48,15 @@ const SearchPage = () => {
 
   return (
     <section className={`${styles.search}`}>
-      <div>
-        <form
-          className="bg-gradient-to-r from-purple-300 to-blue-300 flex justify-center p-8"
-          onSubmit={onSubmit}
-        >
+      <div className="bg-gradient-to-r from-purple-300 to-blue-300 p-8">
+        <form className={`${styles.searchForm}`} onSubmit={onSubmit}>
           <input
-            className="w-full rounded-md text-xl p-4 outline-none"
+            className={`${styles.searchInput}`}
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button type="submit">
+          <button className={`${styles.searchBtn}`} type="submit">
             <AiOutlineSearch size={'1.5rem'} />
           </button>
         </form>

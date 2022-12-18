@@ -1,3 +1,36 @@
 .search {
   min-height: calc(100vh - 88px - 96px);
 }
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.searchBtn {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  translate: -50%;
+  margin-top: 2px;
+  color: #000000;
+  opacity: 0.6;
+}
+.searchBtn:hover {
+  color: #f87171;
+}
