@@ -43,4 +43,8 @@
   .tagIndex {
     flex-direction: column;
   }
+
+  .tags {
+    width: 100%;
+  }
 }
