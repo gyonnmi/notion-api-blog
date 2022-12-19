@@ -9,7 +9,7 @@
 }
 
 .aside {
-  flex-basis: 15%;
+  /* flex-basis: 15%; */
 }
 
 .tags {
@@ -17,6 +17,7 @@
   border: 1px solid #ccc;
   box-shadow: 1px 2px 5px 0px rgb(165, 165, 165);
   border-radius: 15px;
+  width: 150px;
 }
 
 .tagsTitle {

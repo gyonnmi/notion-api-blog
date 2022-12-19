@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { CardData } from 'types/types';
 import { getAlltags } from 'utils/getAllTags';
+import { getCachedDatabaseItems } from 'utils/getCachedDatabaseItems';
 import { getDatabaseItems } from '../cms/notion';
 import HeroSection from '../components/Intro/HeroSection';
 import { parseDatabaseItems } from '../utils/parseDatabaseItems';
@@ -69,7 +70,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // databaseId가 undefind일 경우
   if (!databaseId) throw new Error('DATABASE_ID is not defind');
 
-  const databaseItems = await getDatabaseItems(databaseId);
+  const databaseItems = await getCachedDatabaseItems(databaseId);
 
   const parsedData = parseDatabaseItems(databaseItems);
 

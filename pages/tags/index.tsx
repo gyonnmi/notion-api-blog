@@ -7,6 +7,7 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 import { CardData } from 'types/types';
 import { getAlltags } from 'utils/getAllTags';
+import { getCachedDatabaseItems } from 'utils/getCachedDatabaseItems';
 import { parseDatabaseItems } from 'utils/parseDatabaseItems';
 import { insertPreviewImage } from 'utils/previewImage';
 import styles from './index.module.css';
@@ -47,7 +48,7 @@ export const getStaticProps: GetStaticProps<TagIndexPageProps> = async () => {
 
   if (!databaseId) throw new Error('DATABASE_ID is not defined');
 
-  const databaseItems = await getDatabaseItems(databaseId);
+  const databaseItems = await getCachedDatabaseItems(databaseId);
 
   const parsedData = parseDatabaseItems(databaseItems);
   const dataWithPreview = await insertPreviewImage(parsedData);
