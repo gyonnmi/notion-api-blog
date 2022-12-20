@@ -1,0 +1,33 @@
+.wrap {
+  max-width: 56rem;
+  min-height: calc(100vh - 88px - 96px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contentWrap {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mainTitle {
+  font-weight: 900;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.subTitle {
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+}

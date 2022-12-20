@@ -6,6 +6,7 @@ import { CardData } from 'types/types';
 import { getCachedDatabaseItems } from 'utils/getCachedDatabaseItems';
 import { parseDatabaseItems } from 'utils/parseDatabaseItems';
 import { insertPreviewImage } from 'utils/previewImage';
+import styles from './404.module.css';
 
 interface NotFoundPageProps {
   data: CardData;
@@ -14,11 +15,11 @@ interface NotFoundPageProps {
 const NotFoundPage = ({ data }: NotFoundPageProps) => {
   return (
     <section>
-      <div className="mx-auto max-w-4xl flex justify-center items-center flex-col gap-4 min-h-screen">
-        <div className="mb-8 text-center">
-          <h1 className="font-black text-4xl mb-16">404 Not Found!</h1>
-          <h2 className="font-extrabold text-4xl">저런! 막다른 길이네요!</h2>
-          <p className="text-2xl">대신 이런 글은 어떠세요?</p>
+      <div className={`${styles.wrap}`}>
+        <div className={`${styles.contentWrap}`}>
+          <h1 className={`${styles.mainTitle}`}>404 Not Found!</h1>
+          <h2 className={`${styles.subTitle}`}>저런! 막다른 길이네요!</h2>
+          <p className={`${styles.text}`}>대신 이런 글은 어떠세요?</p>
         </div>
         <CardItem data={data} />
       </div>
