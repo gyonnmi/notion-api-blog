@@ -78,13 +78,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const allTags = getAlltags(parsedData);
 
-  const duplicatedData: CardData[] = [];
-
-  for (let i = 0; i < 20; i++) {
-    duplicatedData.push(...parsedData);
-    duplicatedData.push(...dataWithPreview);
-  }
-
   return {
     props: {
       data: dataWithPreview,
