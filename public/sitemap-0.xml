@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://rizy.dev</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/profile</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/search</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/blog/e6579b95-8d0c-4c9c-af46-981c6eebb74d</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/blog/8a7dc4aa-0b98-40b4-a9c1-49a37d33211c</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/blog/7a692cec-f96f-498d-82b5-8012d04effb4</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/blog/9e695754-cd13-4974-be40-c576f36fbb36</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/blog/4552408f-eb92-4fa8-9463-1bda3c022645</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/mysql</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/back-end</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/java</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/spring</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/php</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rizy.dev/tags/javascript</loc><lastmod>2022-12-20T09:10:52.295Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/profile</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/search</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/e6579b95-8d0c-4c9c-af46-981c6eebb74d</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/8a7dc4aa-0b98-40b4-a9c1-49a37d33211c</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/a8858fe3-a93f-4f03-8b1c-662081b818fb</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/7a692cec-f96f-498d-82b5-8012d04effb4</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/9e695754-cd13-4974-be40-c576f36fbb36</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/blog/4552408f-eb92-4fa8-9463-1bda3c022645</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/mysql</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/back-end</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/java</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/spring</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/php</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rizy.dev/tags/javascript</loc><lastmod>2022-12-20T15:51:09.782Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -11,6 +11,7 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
+    "@giscus/react": "^2.2.6",
     "@notionhq/client": "^2.2.2",
     "@types/node": "18.11.8",
     "@types/react": "^18.0.26",

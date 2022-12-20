@@ -1,6 +1,7 @@
-import React, { PropsWithChildren } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import ToTopButton from 'components/common/ToTopButton';
+import React, { PropsWithChildren } from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
 //PropsWithChildren => children 하나만 가져올 때 이거 쓰면 편함
 const Layout = ({ children }: PropsWithChildren) => {
@@ -9,6 +10,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       <Header />
       <main>{children}</main>
       <Footer />
+      <ToTopButton />
     </>
   );
 };

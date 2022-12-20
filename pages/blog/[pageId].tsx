@@ -1,4 +1,4 @@
-import { getDatabaseItems, getPageContent } from 'cms/notion';
+import { getPageContent } from 'cms/notion';
 import LoadingSpiner from 'components/common/LoadingSpiner';
 import NotionPageRenderer from 'components/notion/NotionPageRenderer';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -7,6 +7,7 @@ import { ExtendedRecordMap } from 'notion-types';
 import React from 'react';
 import { getCachedDatabaseItems } from 'utils/getCachedDatabaseItems';
 import { insertPreviewImageToRecordMap } from 'utils/previewImage';
+import Giscus from '@giscus/react';
 
 interface BlogDetailsPageProps {
   recordMap: ExtendedRecordMap;
@@ -25,6 +26,24 @@ const BlogDetailsPage = ({ recordMap }: BlogDetailsPageProps) => {
   return (
     <section>
       <NotionPageRenderer recordMap={recordMap} />
+      <div className="max-w-4xl mx-auto my-8">
+        <Giscus
+          id="comments"
+          term="blog"
+          repo="gyonnmi/notion-api-blog"
+          repoId="R_kgDOIWUBOw"
+          category="General"
+          categoryId="DIC_kwDOIWUBO84CTK2Y"
+          mapping="pathname"
+          strict="0"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="light"
+          lang="ko"
+          loading="lazy"
+        />
+      </div>
     </section>
   );
 };
